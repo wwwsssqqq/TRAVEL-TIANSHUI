@@ -1,0 +1,236 @@
+/*登录模块*/
+.ui-login-form{
+	position:absolute;
+	top:40px;
+	right:160px;
+	z-index:10;
+	width:300px;
+	height:300px;
+	 /*filter:alpha(opacity:70); */
+	 /*opacity:0.7;   */
+	 /*-moz-opacity:0.7;*/
+	 /*-khtml-opacity: 0.7;*/
+	 background-color:#f6fbfa;
+	 padding:0 25px;
+	border-radius:10px;
+
+}
+.login-form{
+	display:block;
+	width:100%;
+}
+.login-box{
+	width:100%;
+	height:50px;
+	display:block;
+	border:3px solid silver;
+	/*background:#cdec54;*/
+	margin-top:20px;
+}
+.login-name{
+              display:inline-block;
+              width:30%;
+              line-height:50px;
+              font-family:宋体;
+	 font-size:16px;
+	 color:#000;
+	 text-align:right;
+	 font-weight:bold;
+              background:#cdec54;
+}
+.login-con{
+	display:inline-block;
+              width:67%;
+              line-height:47px;
+              font-family:宋体;
+	 font-size:16;
+	 color:#000;
+	 border:none;
+	
+}
+.login-pos{
+	margin-top:40px;
+}
+.ui-submit{
+	display:inline-block;
+	width:30%;
+	height:50px;
+	line-height:50px;
+              font-family:宋体;
+              font-weight:bold;
+	 font-size:20px;
+	 color:#fff;
+	 border:none;
+	 background:#ee490f;
+	 cursor:pointer;
+	 margin-top:30px;
+	border-radius:5px;
+
+}
+.submit-pos{
+	float:left;
+	margin-left:30px;
+}
+.reset-pos{
+	float:right;
+	margin-right:30px;
+}
+.ui-submit:hover{
+	background:red;
+}
+
+/*注册注册*/
+.insure-pass{
+	width:32%;
+}
+.insure-pass-con{
+	width:65%;
+}
+.regist-form{
+	height:343px;
+	top:25px;
+}
+
+/*天水文化内容页*/
+.tianshui-culture{
+	width:100%;
+	margin-top:30px;
+}
+.culture-title{
+	float:left;
+	width:100%;
+	background:#a5d420;
+}
+.culture-title-word{
+	float:left;
+	width:20%;
+	font-family:宋体;
+          font-weight:bold;
+          font-size:20px;
+	color:#fff;
+	text-indent: 20px;
+	line-height:50px;
+
+}
+.list-pos{
+	float:right;
+	margin-right:10px;
+}
+.list-pos-menu{
+	float:left;
+}
+.list-pos-menu-page{
+	float:left;
+	font-family:宋体;
+             font-size:14px;
+	color:#000;
+	line-height:50px;
+}
+.first-page:hover{
+	color:blue;
+	text-decoration:underline;
+}
+ .first-culture{
+	color:#2a732a;
+ }
+ .culture-con{
+ 	width:100%;
+ }
+ .culture-con-title{
+ 	width:100%;
+ 	font-family:宋体;
+             font-size:35px;
+	color:#000;
+	line-height:120px;
+	font-weight:bold;
+	text-align:center;
+ }
+ .map-img{
+	display:block;
+	width:500px;
+	margin:0 auto;
+}
+ .map-img:hover .culture-con-img{
+ 	transform:scale(1.3,1.3);
+ 	-moz-transform:scale(1.3,1.3);
+ 	margin:50px auto 50px;
+ }
+ .culture-con-img{
+ 	display:block;
+ 	width:500px;
+             margin:0 auto;
+ }
+ .culture-con-word{
+ 	width:100%;
+ 	font-family:宋体;
+           font-size:16px;
+	color:#000;
+	line-height:35px;
+	text-indent:20px;
+	margin-top:20px;
+ }
+ /*旅游景点列表页*/
+
+.culture-con{
+         width:100%;
+         margin-top:20px;
+         float:left;
+}
+.plances-list-box{
+	width:100%;
+}
+.plances-list-con{
+	float:left;
+	width:100%;
+	margin-top:20px;
+}
+.plances-list-con-img{
+	width:18%;
+	float:left;
+}
+.plances-list-con-title{
+	width:50%;
+           float:left;
+           font-family:宋体;
+           font-size:20px;
+	color:#000;
+	line-height:35px;
+	text-align:center;
+}
+.plances-list-con-title:hover{
+	text-decoration:underline;
+	color:red;
+}
+.plances-list-con-height{
+	width:54%;
+	height:30px;
+	float:left;
+           font-family:宋体;
+           font-size:18px;
+	color:#000;
+	line-height:30px;
+	text-align:center;
+	overflow:hidden;
+}
+.plances-list-con-detail{
+	width:30%;
+	float:left;
+           font-family:宋体;
+           font-size:15px;
+	color:orange;
+	line-height:50px;
+	text-align:center;
+}
+.plances-list-con-opinion{
+	width:15%;
+	float:left;
+           font-family:宋体;
+           font-size:15px;
+	color:orange;
+	line-height:50px;
+	text-align:center;
+}
+.plances-list-con-detail:hover,
+.plances-list-con-opinion:hover{
+	color:red;
+}
