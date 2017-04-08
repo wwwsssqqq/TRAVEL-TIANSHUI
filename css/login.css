@@ -6,10 +6,10 @@
 	z-index:10;
 	width:300px;
 	height:300px;
-	 /*filter:alpha(opacity:70); */
-	 /*opacity:0.7;   */
-	 /*-moz-opacity:0.7;*/
-	 /*-khtml-opacity: 0.7;*/
+	 /*filter:alpha(opacity:70); 
+	 opacity:0.7;   
+	 -moz-opacity:0.7;
+	 -khtml-opacity: 0.7;*/
 	 background-color:#f6fbfa;
 	 padding:0 25px;
 	border-radius:10px;
@@ -233,4 +233,38 @@
 .plances-list-con-detail:hover,
 .plances-list-con-opinion:hover{
 	color:red;
+}
+/*新闻列表页*/
+.news-box{
+	width:100%;
+	float:left;
+}
+.news-box-list{
+	width:100%;
+	float:left;
+}
+.new-box-list-link{
+	width:75%;
+	float:left;
+	font-family:宋体;
+           font-size:16px;
+	color:#000;
+	line-height:50px;
+	text-indent:20px;
+}
+.new-box-list-link:hover{
+	color:#aa123d;
+	text-indent:40px;
+}
+.new-box-list-data{
+	width:20%;
+	float:right;
+	font-family:宋体;
+           font-size:15px;
+	color:#000;
+	line-height:50px;
+	text-align:center;
+}
+.feitian{
+	margin-top:20px;
 }
