@@ -88,7 +88,7 @@ img{
 	position:relative;
 	width:100%;
 	height:380px;
-	/*overflow:hidden;*/
+	overflow:hidden;
 	z-index:10;
 }
 .banner-box{
@@ -106,6 +106,28 @@ img{
 	display:block;
 	width:100%;
 	height:100%;
+}
+.count{
+	position:absolute;
+	width:10%;
+	z-index:20;
+	bottom:10px;
+	right:10px;
+}
+.count li{
+	width:30px;
+	height:30px;
+	font-family:微软雅黑;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+	background:rgba(112,222,34,.6);
+	cursor:pointer;
+	margin-top:5px;
+}
+.on{
+	background:red;
 }
 .ui-container{
            width:1200px;
