@@ -88,7 +88,7 @@ img{
 	position:relative;
 	width:100%;
 	height:380px;
-	overflow:hidden;
+	/*overflow:hidden;*/
 	z-index:10;
 }
 .banner-box{
