@@ -288,10 +288,17 @@
 	background:silver;
 	margin-top:10px;
 }
+.travle-imgs li{
+	float:left;
+	width:220px;
+	height:138px;
+	margin-right:16px;
+	margin-top:40px;
+}
 .imgs-link{
 	float:left;
 	margin-right:16px;
-	margin-top:40px;
+	/*margin-top:40px;*/
 }
 .new-left{
 	margin-left:16px;

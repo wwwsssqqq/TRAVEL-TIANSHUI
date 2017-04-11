@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/container.css" />
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="./js/pptBox.js"></script>
+
   </head>
   <body>
       <div class="ui-wrap">
@@ -41,22 +43,27 @@
 	    </div>
                 <!-- 导航 end -->
       	   <!-- banner start -->
-      	   <div class="ui-banner focus-pic" id="focusPic">
-      	         <ul class="banner-box img">
-                		<li ><a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a></li>
-                	   	<li><a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a></li>
-                	   	<li><a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a></li>
-                	   	<li><a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a></li>
-                        <li><a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a></li>
-                    </ul>
-      	        <ul class="count">
-                          <li>1</li>    
-                          <li>2</li>    
-                          <li>3</li>    
-                          <li>4</li>   
-                          <li>5</li>     
-                   </ul>
-      	   </div>
+      	    <div class="ui-banner-box">
+           <div class="ui-banner">
+                  <div id="xxx"  >
+                     <script type="text/javascript">
+                         var box = new PPTBox();
+                         box.width = 1349; //宽度
+                         box.height = 381; //高度
+                         box.autoplayer = 3; //自动播放间隔时间
+
+                         //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+                         box.add({ "url": "image/xi_05.jpg", "href": "#", "title": "悬浮提示标题1" })
+                         box.add({ "url": "image/xi_03.jpg", "href": "#", "title": "悬浮提示标题2" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题3" })
+                         box.add({ "url": "image/xi_04.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_06.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.show();
+                      </script>
+                  </div>
+           </div>
+      </div>
       	   <!-- banner end -->
       	</div>
               <!-- 信息分类 start -->
@@ -173,13 +180,13 @@
                             <span class="type-name travel-box">旅游景点</span>
                             <a class="more" href="#">更多>></a>
                     </span>
-                    <div class="travle-imgs">
-                         <a  class="imgs-link new-left" href="#" > <img class="one" src="./image/shuilian.jpg" alt=""  /></a>
-                          <a  class="imgs-link" href="#" > <img class="one" src="./image/daxiang.jpg" alt=""  /></a>
-                           <a  class="imgs-link" href="#" > <img class="one" src="./image/zhiwu.jpg" alt=""  /></a> 
-                          <a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a>
-                         <a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a>
-                    </div>
+                    <ul class="travle-imgs J-marquee">
+                         <li ><a  class="imgs-link new-left " href="#" > <img class="one" src="./image/shuilian.jpg" alt=""  /></a></li>
+                         <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/daxiang.jpg" alt=""  /></a></li>
+                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/zhiwu.jpg" alt=""  /></a></li>
+                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
+                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
+                    </ul>
               </div>
                <!-- 旅游景点 end -->
 
@@ -192,5 +199,12 @@
       </div>
   </body>
 </html>
-<script type="text/javascript" src="./js/selected.js"></script>
-<script type="text/javascript" src="./js/banner.js"></script>
+<script>
+    var aslide = function () {
+       var _el = $(".J-marquee li").first();
+       _el.hide();
+       $("J-marquee").append(_el);
+       _el.show();
+    }
+    var timer = setInterval(aslide,2000);
+</script>

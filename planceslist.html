@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/container.css" />
     <link rel="stylesheet" type="text/css" href="./css/login.css" />
+    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="./js/pptBox.js"></script>
   </head>
   <body>
       <div class="ui-wrap">
@@ -41,14 +43,27 @@
       </div>
                 <!-- 导航 end -->
            <!-- banner start -->
+           <div class="ui-banner-box">
            <div class="ui-banner">
-             <div class="banner-box">
-                      <a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a>
-                      <a  class="banner-list" href="#" ><img class="bannerbannerbanner" src="./image/xi_03.jpg" alt="" /></a>
-                      <a  class="banner-list" href="#" ><img class="bannerbanner" src="./image/xi_04.jpg" alt="" /></a>
-                      <a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a>
-             </div>
+                  <div id="xxx"  >
+                     <script type="text/javascript">
+                         var box = new PPTBox();
+                         box.width = 1349; //宽度
+                         box.height = 381; //高度
+                         box.autoplayer = 3; //自动播放间隔时间
+
+                         //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+                         box.add({ "url": "image/xi_05.jpg", "href": "#", "title": "悬浮提示标题1" })
+                         box.add({ "url": "image/xi_03.jpg", "href": "#", "title": "悬浮提示标题2" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题3" })
+                         box.add({ "url": "image/xi_04.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_06.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.show();
+                      </script>
+                  </div>
            </div>
+      </div>
            <!-- banner end -->
         </div>
               <!-- 信息分类 start -->

@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" href="./css/container.css" />
     <link rel="stylesheet" type="text/css" href="./css/login.css" />
+    <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="./js/pptBox.js"></script>
   </head>
   <body>
       <div class="ui-wrap">
@@ -40,40 +42,51 @@
 	                 </ul>
 	    </div>
                 <!-- 导航 end -->
-      	   <!-- banner start -->
-      	   <div class="ui-banner">
-      	     <div class="banner-box">
-                	   	<a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a>
-                	   	<a  class="banner-list" href="#" ><img class="bannerbannerbanner" src="./image/xi_03.jpg" alt="" /></a>
-                	   	<a  class="banner-list" href="#" ><img class="bannerbanner" src="./image/xi_04.jpg" alt="" /></a>
-                	   	<a  class="banner-list" href="#" ><img class="banner" src="./image/xi_05.jpg" alt="" /></a>
-      	     </div>
-              <!-- 登录 start-->
-           <div class="ui-login-form">
-                <form class="login-form" method="" active="">
-                    <span class="login-box login-pos">
-                       <label class="login-name">用户名：</label>
-                       <input  class="login-con" type="text" placeholder="请输入用户名" />
-                    </span>
-                     <span class="login-box">
-                       <label class="login-name">密码：</label>
-                       <input  class="login-con" type="password" placeholder="请输入密码" />
-                    </span>
-                    <button class="ui-submit submit-pos" type="submit">登录</button>
-                     <button class="ui-submit reset-pos" type="reset">重置</button>
-                </form>
+                <!-- banner start -->
+          <div class="ui-banner-box">
+                   <div class="ui-banner">
+                          <div id="xxx"  >
+                             <script type="text/javascript">
+                                 var box = new PPTBox();
+                                 box.width = 1349; //宽度
+                                 box.height = 381; //高度
+                                 box.autoplayer = 3; //自动播放间隔时间
+
+                                 //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+                                 box.add({ "url": "image/xi_05.jpg", "href": "#", "title": "悬浮提示标题1" })
+                                 box.add({ "url": "image/xi_03.jpg", "href": "#", "title": "悬浮提示标题2" })
+                                 box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题3" })
+                                 box.add({ "url": "image/xi_04.jpg", "href": "#", "title": "悬浮提示标题4" })
+                                 box.add({ "url": "image/xi_06.jpg", "href": "#", "title": "悬浮提示标题4" })
+                                 box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题4" })
+                                 box.show();
+                              </script>
+                          </div>
+                          <!-- 登录 start-->
+                   <div class="ui-login-form">
+                      <form class="login-form" method="" active="">
+                          <span class="login-box login-pos">
+                             <label class="login-name">用户名：</label>
+                             <input  class="login-con" type="text" placeholder="请输入用户名" />
+                          </span>
+                           <span class="login-box">
+                             <label class="login-name">密码：</label>
+                             <input  class="login-con" type="password" placeholder="请输入密码" />
+                          </span>
+                          <button class="ui-submit submit-pos" type="submit">登录</button>
+                           <button class="ui-submit reset-pos" type="reset">重置</button>
+                      </form>
+                  </div>
+                   <!-- 登录 end-->
+              </div>
            </div>
-           <!-- 登录 end-->
-      	   </div>
-      	   <!-- banner end -->
-      	</div>
-              
-     
-      	<div class="ui-footer">
-           <p class="publish">甘肃省天水市秦州区天水师范学院@copy</p> 
-            <p class="publish">邮箱：备案许可证编号陇ICP备09002627号</p> 
-             <p class="publish">技术维护与支持:XXX</p> 
         </div>
-      </div>
+      	   <!-- banner end -->
+        <div class="ui-footer">
+                <p class="publish">甘肃省天水市秦州区天水师范学院@copy</p> 
+                <p class="publish">邮箱：备案许可证编号陇ICP备09002627号</p> 
+                <p class="publish">技术维护与支持:XXX</p> 
+       </div>
+    </div>
   </body>
 </html>

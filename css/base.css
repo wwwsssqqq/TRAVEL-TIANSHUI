@@ -84,12 +84,17 @@ img{
 	color:#fff;
 	background:#2a732a;
 }
+.ui-banner-box{
+	width:100%;
+	background:#2a732a;
+}
 .ui-banner{
 	position:relative;
-	width:100%;
+	width:1200px;
 	height:380px;
 	overflow:hidden;
 	z-index:10;
+	margin:0 auto;
 }
 .banner-box{
 	position:absolute;
