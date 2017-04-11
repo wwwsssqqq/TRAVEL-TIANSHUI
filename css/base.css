@@ -149,3 +149,24 @@ img{
 	text-align:center;
 	line-height:30px;
 }
+
+
+
+
+
+.mainbox{
+    overflow:hidden;
+    position:absolute;
+    z-index:1;
+}
+ .flashbox{
+    overflow:hidden;
+    position:relative;
+}
+.imagebox{
+    text-align:left;position:relative;z-index:777;
+}
+
+ .bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;cursor:pointer;float:right;}
+.defimg{background-image:url(../image/02.png)}
+.curimg{background-image:url(../image/01.png)}

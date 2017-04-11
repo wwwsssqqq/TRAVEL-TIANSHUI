@@ -34,7 +34,8 @@ window.onload = function(){
 	}
 	
 	function cutover(){
-		for (i = 0; i < aBtn.length; i++) aBtn[i].className = "";
+		for (i = 0; i < aBtn.length; i++) 
+	            aBtn[i].className = "";
 		aBtn[index].className = "on";			
 		startMove(-(index * aImg[0].offsetHeight))
 	}
@@ -72,33 +73,33 @@ window.onload = function(){
 }
 
 
-$(function(){
-	var $fp = $("#focusPic"),
-		$imgUl = $(".img",$fp),
-		$img = $("img",$fp),
-		aTmp = [],
-		timer = null,
-		i = 0,
-		c = $img.size();
-	for(i;i+parseInt(i+1));
-		i == 0 && (aTmp[0] = "
-"+1+"
-")
-	}
-	var $count = $("
-").addClass("count").html(aTmp.join("")).appendTo($fp)
-	function autoPlay(){
-		clearInterval(timer);
-		i = 0;
-		timer = setInterval(function(){
-			play()
-		},3000)
-	}
-	function play(){
-		i++;
-		i>c-1 && (i=0);
-		$imgUl.animate({"top":-$img.height()*i})
-		$count.children().removeClass("on").eq(i).addClass("on")
-	}
-	autoPlay()
-})
+// $(function(){
+// 	var $fp = $("#focusPic"),
+// 		$imgUl = $(".img",$fp),
+// 		$img = $("img",$fp),
+// 		aTmp = [],
+// 		timer = null,
+// 		i = 0,
+// 		c = $img.size();
+// 	for(i;i"+parseInt(i+1)+"")
+// 		i == 0 && (aTmp[0] = "
+// "+1+"
+// ")
+// 	}
+// 	var $count = $("
+// ").addClass("count").html(aTmp.join("")).appendTo($fp)
+// 	function autoPlay(){
+// 		clearInterval(timer);
+// 		i = 0;
+// 		timer = setInterval(function(){
+// 			play()
+// 		},3000)
+// 	}
+// 	function play(){
+// 		i++;
+// 		i>c-1 && (i=0);
+// 		$imgUl.animate({"top":-$img.height()*i})
+// 		$count.children().removeClass("on").eq(i).addClass("on")
+// 	}
+// 	autoPlay()
+// })

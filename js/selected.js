@@ -6,11 +6,13 @@ $(document).ready(function(){
 
     // banner轮播图
     $(".J-slide").animate(function() {
-          // var slideArray = $("#J-slide").getElementByTagName(a);
-          
-        
-
-
+          // var slideArray = $("#J-slide").getElementByTagName(a); };
+          $(this).addClass(
+               left:"";
+          	);
     });
+     setInterval(, 1000);
+     //Tab切换
+     
   });
 
