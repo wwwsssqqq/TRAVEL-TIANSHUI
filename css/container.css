@@ -73,6 +73,7 @@
 }
 .trigger-item-list{
 	width:100%;
+	display:none;
 }
 .list-one{
 	float:left;
@@ -174,8 +175,8 @@
 	line-height:25px;
 	text-indent:10px;
 	display:-webkit-box !important;
-           overflow:hidden;
-	 text-overflow:ellipsis;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 .detail{
 	font-family:微软雅黑;
@@ -297,13 +298,14 @@
 }
 .imgs-link{
 	float:left;
-	margin-right:16px;
-	/*margin-top:40px;*/
 }
 .new-left{
 	margin-left:16px;
 }
 .travel-box{
-	margin-top:0px;
-             width:15%;
+	width:15%;
+}
+.active {
+	display: block;
+	background:greenyellow;
 }

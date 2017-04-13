@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="./css/container.css" />
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="./js/pptBox.js"></script>
+    <script type="text/javascript" src="./js/el.js"></script>
 
-  </head>
+
+   </head>
   <body>
       <div class="ui-wrap">
       	<div class="ui-header">
@@ -75,16 +77,16 @@
                             <a class="more" href="#">更多>></a>
                         </span>
                         <div class="news-con">
-                           <div class="trigger-box">
+                           <div class="trigger-box J-trigger">
                                <ul class="trigger-nav">
-                                   <li class="trigger-nav-list">名景推荐</li>
-                                   <li class="trigger-nav-list">小吃特产</li>
-                                   <li class="trigger-nav-list">热门新闻</li>
+                                   <li class="trigger-nav-list" triggercard="first">名景推荐</li>
+                                   <li class="trigger-nav-list" triggercard="second">小吃特产</li>
+                                   <li class="trigger-nav-list" triggercard="third">热门新闻</li>
                                </ul>
                            </div>
                            <div class="trigger-item">
                                <!-- 名景推荐 start-->
-                               <div class="trigger-item-list">
+                               <div class="trigger-item-list active" cardname="first">
                                    <h1 class="list-one">
                                        <img class="place" src="./image/maiji.jpg" alt="" />
                                        <p class="place-title"> 麦积山石窟</p>
@@ -106,7 +108,7 @@
                                </div>
                                <!-- 名景推荐 end-->
                                <!-- 小吃特产 start-->
-                               <div class="trigger-item-list">
+                               <div class="trigger-item-list" cardname="second">
                                       <a class="delicious-box"  href="#">
                                             <img class="delicious-img" src="./image/liangfen.png" alt="" />
                                             <span class="delicious-title">清真碎面</span>
@@ -126,7 +128,7 @@
                                </div>
                                <!-- 小吃特产 end-->
                                <!-- 热门新闻 start-->
-                               <div class="trigger-item-list">
+                               <div class="trigger-item-list" cardname="third">
                                         <a class="news-img" href="#">
                                             <img class="img-con" src="./image/tianshui.jpg" alt="" />
                                         </a>
@@ -181,14 +183,17 @@
                             <a class="more" href="#">更多>></a>
                     </span>
                     <ul class="travle-imgs J-marquee">
-                         <li ><a  class="imgs-link new-left " href="#" > <img class="one" src="./image/shuilian.jpg" alt=""  /></a></li>
-                         <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/daxiang.jpg" alt=""  /></a></li>
-                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/zhiwu.jpg" alt=""  /></a></li>
-                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
-                        <li ><a  class="imgs-link" href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
+                         <li class="new-left"><a href="#" > <img class="one" src="./image/shuilian.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="./image/daxiang.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="./image/zhiwu.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
                     </ul>
               </div>
                <!-- 旅游景点 end -->
+
+
+
 
           </div>
       	<div class="ui-footer">
@@ -199,12 +204,6 @@
       </div>
   </body>
 </html>
-<script>
-    var aslide = function () {
-       var _el = $(".J-marquee li").first();
-       _el.hide();
-       $("J-marquee").append(_el);
-       _el.show();
-    }
-    var timer = setInterval(aslide,2000);
-</script>
+
+
+$(".trigger-item .trigger-item-list[cardname="second"]")
