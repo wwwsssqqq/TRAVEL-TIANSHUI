@@ -60,11 +60,7 @@
 	line-height:50px;
 	text-align:center;
 	font-weight:bold;
-}
-.trigger-nav-list:hover{
-             background:#a5d420;
-             color:red;
-             cursor:pointer;
+	cursor:pointer;
 }
 .trigger-item{
 	width:100%;
@@ -115,6 +111,7 @@
 .news-list{
 	float:right;
 	width:50%;
+	margin-top:10px;
 }
 .list-con{
 	width:100%;
@@ -306,6 +303,7 @@
 	width:15%;
 }
 .active {
+	color:#fff;
 	display: block;
 	background:greenyellow;
 }
