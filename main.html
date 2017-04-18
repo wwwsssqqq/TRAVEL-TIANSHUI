@@ -8,6 +8,8 @@
     <script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="./js/pptBox.js"></script>
     <script type="text/javascript" src="./js/el.js"></script>
+       <script type="text/javascript" src="./js/j-marquee.js"></script>
+
 
 
    </head>
@@ -186,19 +188,44 @@
               </div>
                <!-- 旅游景点 start -->
               <div class="travle-places">
-                    <span class="news-type  type-places">
+                   <span class="news-type  type-places">
                             <span class="type-name travel-box">旅游景点</span>
                             <a class="more" href="#">更多>></a>
                     </span>
-                    <ul class="travle-imgs J-marquee">
-                         <li class="new-left"><a href="#" > <img class="one" src="./image/shuilian.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="./image/daxiang.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="./image/zhiwu.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="./image/nanguo.jpg" alt=""  /></a></li>
-                    </ul>
+                  <div class="jg_b_colunm" id="Marquee_x">
+                      <ul>
+                          <li>
+                              <div>
+                                  <a href="/Home/detail?newId=77">
+                                      <img src="./image/daxiang.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=84">
+                                      <img src="./image/nanguo.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=85">
+                                      <img src="./image/maiji.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=86">
+                                      <img src="./image/place.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=87">
+                                      <img src="./image/fuxi.jpg" alt="" />
+                                  </a>
+                              </div>
+
+                          </li>
+                      </ul>
+                  </div>
               </div>
-               <!-- 旅游景点 end -->
+            <!-- 旅游景点 end -->
           </div>
       	<div class="ui-footer">
            <p class="publish">甘肃省天水市秦州区天水师范学院@copy</p> 
@@ -209,3 +236,9 @@
   </body>
 </html>
 
+<script>
+    $(function () {
+        $('#Marquee_x').jcMarquee({ 'marquee': 'x', 'margin_right': '10px', 'speed': 20 });
+        // DIVCSS5提示：10px代表间距，第二个20代表滚动速度
+    });
+</script>

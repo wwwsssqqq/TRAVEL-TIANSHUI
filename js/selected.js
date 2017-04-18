@@ -4,15 +4,6 @@ $(document).ready(function(){
               alert("请按下“Ctrl+D”进行收藏！");
     });
 
-    // banner轮播图
-    $(".J-slide").animate(function() {
-          // var slideArray = $("#J-slide").getElementByTagName(a); };
-          $(this).addClass(
-               left:"";
-          	);
-    });
-     setInterval(, 1000);
-     //Tab切换
      
   });
 

@@ -1,14 +1,4 @@
 $(document).ready( function() {
-
-    var aslide = function () {
-
-        var el = $(".J-marquee li").first();
-        el.hide();
-        $(".J-marquee").append(el);
-        el.show();
-
-     };
-     setInterval("aslide()",2000);
     //选项卡
     $(".J-trigger .trigger-nav li").hover(  function () {
         var _trigger = $(this);
@@ -32,7 +22,10 @@ $(document).ready( function() {
         });
     }
 
-
+    // 加入收藏
+    $(".J-selected").click(function(){
+        alert("请按下“Ctrl+D”进行收藏！");
+    });
 
 
 });
