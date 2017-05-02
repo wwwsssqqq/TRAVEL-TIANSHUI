@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <title>基于网络的天水旅游景点推介查询系统的设计与实现</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/container.css" />
+    <script type="text/javascript" src="../public/js/jquery-1.12.2.min.js"></script>
+    <script type="text/javascript" src="../public/js/pptBox.js"></script>
+    <script type="text/javascript" src="../public/js/el.js"></script>
+
+
+   </head>
+  <body>
+      <div class="ui-wrap">
+      	<div class="ui-header">
+      	   <!-- 登录 start-->
+      	   <div class="ui-header-box">
+      	     <div class="header-top">
+      	     	<h1 class="welcome">欢迎来到天水旅游网站！</h1>
+      	     	<ul class="ui-login">
+      	     	     <li class="ui-login-list"><a class="list-link J-selected" href="#">加入收藏</a></li>
+      	     	     <li class="ui-login-list"><a class="list-link" href="./login.html">登录</a></li>
+      	     	     <li class="ui-login-list"><a class="list-link" href="regist.html">注册</a></li>
+      	     	</ul>
+      	     </div>
+      	   </div>
+      	   <!-- 登录 end-->
+      	   <!-- logo start -->
+      	   <div class="ui-logo">
+      	   	<img class="logo" src="../public/image/logo.jpg" alt="logo" />
+      	   </div>
+      	   <!-- logo end-->
+                <!-- 导航 start -->
+                <div class="nav-box">
+	                 <ul class="ui-nav">
+	                 	<li class="nav-list"><a class="menu" href="./main.html">首页</a></li>
+	                 	<li class="nav-list"><a class="menu" href="planceslist.html">旅游景点</a>
+                            <ul class="second-nav">
+                                <li class="second-nav-list"><a class="second-nav-list-link" href="#" >特色景点</a></li>
+                                <li class="second-nav-list"><a class="second-nav-list-link" href="#" >特色景点</a></li>
+                                <li class="second-nav-list"><a class="second-nav-list-link" href="#" >特色景点</a></li>
+                            </ul>
+                        </li>
+	                 	<li class="nav-list"><a class="menu" href="./culture.html">天水文化</a></li>
+	                 	<li class="nav-list"><a class="menu" href="./eatlist.html">特色小吃</a></li>
+	                 	<li class="nav-list"><a class="menu" href="newslist.html">新闻动态</a></li>
+	                 	<li class="nav-list"><a class="menu" href="#">旅游咨询</a></li>
+	                 	<li class="nav-list"><a class="menu" href="travle-map.html">旅游地图</a></li>
+	                 </ul>
+	    </div>
+                <!-- 导航 end -->
+      	   <!-- banner start -->
+      	    <div class="ui-banner-box">
+             <div class="ui-banner">
+                  <div id="xxx"  >
+                     <script type="text/javascript">
+                         var box = new PPTBox();
+                         box.width = 1349; //宽度
+                         box.height = 381; //高度
+                         box.autoplayer = 3; //自动播放间隔时间
+
+                         //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+                         box.add({ "url": "image/xi_05.jpg", "href": "#", "title": "悬浮提示标题1" })
+                         box.add({ "url": "image/xi_03.jpg", "href": "#", "title": "悬浮提示标题2" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题3" })
+                         box.add({ "url": "image/xi_04.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_06.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.add({ "url": "image/xi_02.jpg", "href": "#", "title": "悬浮提示标题4" })
+                         box.show();
+                      </script>
+                  </div>
+           </div>
+      </div>
+      	   <!-- banner end -->
+      	</div>
+              <!-- 信息分类 start -->
+      	<div class="ui-container">
+              <div class="con-box">
+                    <div class="con-left">
+                        <span class="news-type">
+                            <span class="type-name">信息分类</span>
+                            <a class="more" href="#">更多>></a>
+                        </span>
+                        <div class="news-con">
+                           <div class="trigger-box J-trigger">
+                               <ul class="trigger-nav">
+                                   <li class="trigger-nav-list active" triggercard="first">名景推荐</li>
+                                   <li class="trigger-nav-list" triggercard="second">小吃特产</li>
+                                   <li class="trigger-nav-list" triggercard="third">热门新闻</li>
+                               </ul>
+                           </div>
+                           <div class="trigger-item">
+                               <!-- 名景推荐 start-->
+                               <div class="trigger-item-list active" cardname="first">
+                                   <h1 class="list-one">
+                                       <img class="place" src="../public/image/maiji.jpg" alt="" />
+                                       <p class="place-title"> 麦积山石窟</p>
+                                       <p class="place-con">麦积山石窟的佛像造像大多不是直接由石头雕刻而成，而是以石为胚，外裹黄土的石泥塑像。当时的工匠在所用泥...<a class="
+                                       detail" href="#">查看详情>></a></p>
+                                   </h1>
+                                    <h1 class="list-one">
+                                       <img class="place" src="../public/image/place.jpg" alt="" />
+                                       <p class="place-title"> 大地湾遗址</p>
+                                       <p class="place-con">里面有许多大地湾遗址出图的文物和历史遗迹的介绍，最后是大地湾殿堂遗址，在山上，要开车上去，上面有中国...<a class="
+                                       detail" href="#">查看详情>></a></p>
+                                   </h1>
+                                    <h1 class="list-one">
+                                       <img class="place" src="../public/image/fuxi.jpg" alt="" />
+                                       <p class="place-title"> 伏羲庙</p>
+                                       <p class="place-con">伏羲庙是天水比较标志性的景区，里面不大，最后面还有一个博物馆，对于历史爱好者是个不错的去处，这里有一...<a class="
+                                       detail" href="#">查看详情>></a></p>
+                                   </h1>
+                               </div>
+                               <!-- 名景推荐 end-->
+                               <!-- 小吃特产 start-->
+                               <div class="trigger-item-list" cardname="second">
+                                      <a class="delicious-box"  href="#">
+                                            <img class="delicious-img" src="../public/image/liangfen.png" alt="" />
+                                            <span class="delicious-title">清真碎面</span>
+                                      </a>
+                                      <a class="delicious-box"  href="#">
+                                            <img class="delicious-img" src="../public/image/liangfen.png" alt="" />
+                                            <span class="delicious-title">天水凉粉</span>
+                                      </a>
+                                      <a class="delicious-box"  href="#">
+                                            <img class="delicious-img" src="../public/image/zahui.png" alt="" />
+                                            <span class="delicious-title">天水杂烩</span>
+                                      </a>
+                                      <a class="delicious-box"  href="#">
+                                            <img class="delicious-img" src="../public/image/jisi.png" alt="" />
+                                            <span class="delicious-title">鸡丝馄饨</span>
+                                      </a>
+                               </div>
+                               <!-- 小吃特产 end-->
+                               <!-- 热门新闻 start-->
+                               <div class="trigger-item-list" cardname="third">
+                                        <a class="news-img" href="#">
+                                            <img class="img-con" src="../public/image/tianshui.jpg" alt="" />
+                                        </a>
+                                        <ul class="news-list">
+                                             <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                            <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                            <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                            <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                            <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                        </ul>
+                               </div>
+                               <!-- 热门新闻 end-->
+                           </div>
+                        </div>
+                    </div>
+                    <!-- 路线查找 start-->
+                    <div class="con-right">
+                        <div class="traffic">
+                            <span class="news-type">
+                              <span class="type-name another-name">路线查找</span>
+                            </span>
+                          <form method="" active="" name="roal">
+                            <p class="road-box">
+                                <input class="my-road" type="text" placeholder="请输入路线"/>
+                                <a class="hit" href="javascript:void(0)" id="select">搜索</a>
+                                <span class="example" id="J-BOX">
+                                  <a class="example-get J-one" href="javascript:void(0)">麦积山</a>
+                                  <a class="example-get J-one" href="javascript:void(0)">伏羲庙</a>
+                                  <a class="example-get J-one" href="javascript:void(0)">仙人崖</a>
+                                  <a class="example-get J-one" href="javascript:void(0)">大地湾</a>
+                                </span>
+                             </p>
+                          </form>
+                        </div>
+                        <div class="culture">
+                            <span class="news-type distence ">
+                               <span class="type-name another-name">文化溯源</span>
+                              <a class="more" href="#">更多>></a>
+                           </span>
+                           <div class="culture-con">
+                                <a  class="culture-con-box" href="#">
+                                    <img class="tianshui" src="../public/image/tianshui.jpg" alt=""  />
+                                    <span class="tianshui-word">天水位于甘肃东南部，自古是丝绸之路必经之地和兵家必争之地，全市横跨长江、黄河两大流域，新欧亚大陆桥横贯全境。至2013年天水辖武山、甘谷、秦安、清水... </span>
+                                </a>
+                           </div>
+                        </div>
+                    </div>
+                    <!-- 路线查找 end-->
+              </div>
+               <!-- 旅游景点 start -->
+              <div class="travle-places">
+                    <span class="news-type  type-places">
+                            <span class="type-name travel-box">旅游景点</span>
+                            <a class="more" href="#">更多>></a>
+                    </span>
+                    <ul class="travle-imgs J-marquee">
+                         <li class="new-left"><a href="#" > <img class="one" src="../public/image/shuilian.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="../public/image/daxiang.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="../public/image/zhiwu.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>
+                         <li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>
+                    </ul>
+              </div>
+               <!-- 旅游景点 end -->
+          </div>
+      	<div class="ui-footer">
+           <p class="publish">甘肃省天水市秦州区天水师范学院@copy</p> 
+            <p class="publish">邮箱：备案许可证编号陇ICP备09002627号</p> 
+             <p class="publish">技术维护与支持:XXX</p> 
+        </div>
+      </div>
+  </body>
+</html>
+

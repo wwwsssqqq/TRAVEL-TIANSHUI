@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试页面</title>
+</head>
+<body>
+<h1>同学们：</h1>
+<table style = "width: 100%; text-align: left; ">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>地址</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>王世平</td>
+            <td>26</td>
+            <td>男</td>
+            <td>深圳</td>
+        </tr>
+    </tbody>
+</table>
+
+<form action="/test/adduser" method="get">
+    姓名：<input type="text" name = "name"> <br>
+    性别: <input type="radio" name="sex" value="man">男 <input type="radio" name="sex" value="women">女<br>
+    年龄： <input type="text" name = "age"><br>
+    地址： <textarea name="address" id="address" cols="30" rows="10">
+    </textarea><br>
+    <input type="submit" value="增加同学">
+</form>
+<script src="public/js/jquery-1.12.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: "/test/getalluser",
+            type: "get",
+            data:{},
+            dataType: "json",
+            success: function(res){
+                console.log(res);
+            },
+            error: function (res){
+                console.log(res);
+            }
+        })
+    });
+
+
+
+</script>
+
+</body>
+</html>

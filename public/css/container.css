@@ -1,0 +1,309 @@
+.con-box{
+	float:left;
+	width:100%;
+	margin-top:10px;
+}
+.con-left{
+	width:60%;
+	float:left;
+}
+.news-type{
+	clear:both;
+	display:block;
+	width:100%;
+	height:50px;
+	border-bottom:3px solid #914d26;
+}
+.type-name{
+	float:left;
+	width:25%;
+	font-family:微软雅黑;
+	font-size:18px;
+	color:#fff;
+	line-height:50px;
+	background:#a5d420;
+	text-indent:30px;
+	/*font-weight:bold;*/
+}
+.more{
+	float:right;
+	width:25%;
+	font-family:微软雅黑;
+	font-size:14px;
+	color:#e35e3b;
+	line-height:50px;
+	text-align:right;
+}
+.more:hover{
+	color:#3217bd;
+}
+.news-con{
+	width:100%;
+	margin-top:20px;
+}
+.trigger-box{
+	width:100%;
+	float:left;
+}
+.trigger-nav{
+	width:100%;
+	float:left;
+	background:#aed789;
+	border-radius:10px 5px;
+}
+.trigger-nav-list{
+	width:33.3%;
+	float:left;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#e35e3b;
+	line-height:50px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+}
+.trigger-item{
+	width:100%;
+	height:460px;
+	overflow:hidden;
+}
+.trigger-item-list{
+	width:100%;
+	display:none;
+}
+.list-one{
+	float:left;
+	width:100%;
+	margin-top:15px;
+}
+.delicious-box{
+	float:left;
+	width:50%;
+	margin-top:10px;
+}
+.delicious-img{
+	display:block;
+	width:70%;
+	margin-left:20px;
+}
+.delicious-title{
+	display:block;
+	width:70%;
+	margin-left:20px;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#e35e3b;
+	line-height:35px;
+	text-align:center;
+	font-weight:bold;
+             background:#a5d4b0;
+}
+.news-img{
+	float:left;
+	width:40%;
+	height:100%;
+}
+.img-con{
+	display:block;
+	width:100%;
+	height:300px;
+}
+.news-list{
+	float:right;
+	width:50%;
+	margin-top:10px;
+}
+.list-con{
+	width:100%;
+	float:left;
+}
+.person{
+	float:left;
+	width:70%;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#000;
+	line-height:35px;
+}
+.person:hover{
+	text-indent:10px;
+	color:red;
+}
+.news-data{
+	float:right;
+	width:29%;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#000;
+	line-height:35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.place{
+	float:left;
+	margin:0px 10px 0 10px;
+}
+.place-title{
+	width:62%;
+	float:left;
+	font-family:微软雅黑;
+	font-size:20px;
+	color:red;
+	line-height:50px;
+	text-align:center;
+	font-weight:bold;
+}
+.place-con{
+	width:62%;
+	float:left;
+	font-family:微软雅黑;
+	font-size:14px;
+	color:#000;
+	line-height:25px;
+	text-indent:10px;
+	display:-webkit-box !important;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.detail{
+	font-family:微软雅黑;
+	font-size:12px;
+	color:red;
+}
+.detail:hover{
+	color:blue;
+}
+
+
+
+.con-right{
+           float:right;
+           width:30%;
+}
+.traffic{
+	width:100%;
+}
+.traffic-title{
+	width:100%;
+	font-family:微软雅黑;
+	font-size:18px;
+	color:#000;
+	line-height:25px;
+	text-indent:10px;
+}
+ .another-name{
+	text-indent:0px;
+	text-align:center;
+}
+.road-box{
+	width:95%;
+	height:40px;
+	border:3px solid silver;
+	margin:0 auto;
+	margin-top:10px;
+}
+.my-road{
+	float:left;
+	width:80%;
+	font-size:14px;
+	border:none;
+	line-height:40px;
+}
+.hit{
+	float:right;
+	width:16%;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#000;
+	/*border-left:2px dashed silver;*/
+	line-height:40px;
+	text-align:center;
+	background:orange;
+}
+.culture{
+	width:100%;
+	float:left;
+	margin-top:40px;
+}
+.example{
+	display:block;
+	float:left;
+	width:100%;
+	margin-top:5px;
+}
+.example-get{
+	display:inline-block;
+	font-family:微软雅黑;
+	font-size:12px;
+	color:red;
+	text-decoration:underline;
+}
+.culture-con{
+	width:100%;
+}
+.culture-con-box{
+	width:100%;
+	display:block;
+	font-family:微软雅黑;
+	font-size:14px;
+	color:#000;
+}
+.tianshui{
+	display:block;
+	/*width:100%;*/
+	margin:0 auto;
+	margin-top:20px;
+}
+.tianshui-word{
+	display:block;
+	width:100%;
+	text-indent:10px;
+	line-height:35px;
+}
+.another-width{
+	width:15%;
+	margin-top:10px;
+}
+.travle-places{
+	float:left;
+	width:100%;
+	margin-top:10px;
+}
+.travle-imgs{
+	float:left;
+	width:100%;
+	height:220px;
+	background:silver;
+	margin-top:10px;
+}
+.travle-imgs li{
+	float:left;
+	width:220px;
+	height:138px;
+	margin-right:16px;
+	margin-top:40px;
+}
+.imgs-link{
+	float:left;
+}
+.new-left{
+	margin-left:16px;
+}
+.travel-box{
+	width:15%;
+}
+.active {
+	color:#fff;
+	display: block;
+	background:greenyellow;
+}
