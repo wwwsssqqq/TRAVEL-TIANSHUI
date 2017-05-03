@@ -141,6 +141,45 @@
 
 
 
+#Marquee_x{
+	overflow: hidden;
+	width: 1200px;
+}
+.jg_b_colunm{
+	height: 175px;
+	background:#ffffff;
+}
+#Marquee_x ul{
+	width: 1000%;
+	list-style: none;
+	margin-top:25px;
+}
+#Marquee_x ul li{
+	float: left;
+	line-height: 25px;
+	margin-right:10px;
+	overflow: hidden;
+	display: list-item;
+}
+#Marquee_x ul li div{
+	float: left;
+	line-height: 25px;
+	height: 127px;
+	width: 215px;
+	margin-right:10px;
+	overflow: hidden;
+}
+#Marquee_x ul li div a{
+	text-decoration: none;
+}
+#Marquee_x ul li div a img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #555;
+}
+
+
 
 
 

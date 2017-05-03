@@ -177,7 +177,7 @@ img{
 }
 
  .bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;cursor:pointer;float:right;}
-.defimg{background-image:url(../public/image/02.png)}
-.curimg{background-image:url(../public/image/01.png)}
+.defimg{background-image:url(../image/02.png)}
+.curimg{background-image:url(../image/01.png)}
 
 
