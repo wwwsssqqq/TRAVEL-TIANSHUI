@@ -74,9 +74,10 @@
     color:#fff;
     text-align:center;
     background:#3A84BD;
-    margin:20px 0 0 400px;
+    margin:20px 0 0 100px;
     border:none;
     font-weight:bold;
+    line-height:50px;
 }
 .add-button:hover{
     background:#914d26;
