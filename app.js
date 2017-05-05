@@ -8,7 +8,9 @@ const cors = require('cors');
 
 // const JDUser = require("./src/jduser/userinfo");
 const indexRouter = require('./routes/index');
-var testRouter = require("./routes/testRouter");
+const testRouter = require("./routes/testRouter");
+const adminRouter = require("./routes/adminRoute");
+
 const fs = require("fs");
 
 const app = express();
@@ -50,5 +52,6 @@ app.get(/\/.*\.html/, function(req, res) {
 
 app.use('/index', indexRouter);
 app.use('/test',testRouter);
+app.use('/admin',adminRouter);
 
 module.exports = app;
