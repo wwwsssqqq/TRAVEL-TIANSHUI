@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../public/css/container.css" />
     <link rel="stylesheet" type="text/css" href="../public/css/login.css" />
     <script type="text/javascript" src="../public/js/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="../public/js/pptBox.js"></script>
+       <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+       <script type="text/javascript" src="../public/js/pptBox.js"></script>
   </head>
   <body>
       <div class="ui-wrap">
@@ -38,7 +39,7 @@
                         <li class="nav-list"><a class="menu" href="./eatlist.html">特色小吃</a></li>
                         <li class="nav-list"><a class="menu" href="./newslist.html">新闻动态</a></li>
                         <li class="nav-list"><a class="menu" href="./admin.html">后台管理</a></li>
-                        <li class="nav-list"><a class="menu" href="travle-map.html">旅游地图</a></li>
+                        <li class="nav-list"><a class="menu" href="./travle-map.html">旅游地图</a></li>
                     </ul>
 	    </div>
                 <!-- 导航 end -->
@@ -66,15 +67,15 @@
                    <div class="ui-login-form">
                       <form class="login-form" method="" active="">
                           <span class="login-box login-pos">
-                             <label class="login-name">用户名：</label>
-                             <input  class="login-con" type="text" placeholder="请输入用户名" />
+                             <label class="login-name" for="user">用户名：</label>
+                             <input id="user" class="login-con" type="text" placeholder="请输入用户名" />
                           </span>
                            <span class="login-box">
-                             <label class="login-name">密码：</label>
-                             <input  class="login-con" type="password" placeholder="请输入密码" />
+                             <label class="login-name" for="password" >密码：</label>
+                             <input id="password" class="login-con" type="password" placeholder="请输入密码" />
                           </span>
-                          <button class="ui-submit submit-pos" type="submit">登录</button>
-                           <button class="ui-submit reset-pos" type="reset">重置</button>
+                           <button id="login"class="ui-submit submit-pos" type="submit">登录</button>
+                           <button id="register" class="ui-submit reset-pos"><a href="./regist.html" style="color:#fff;">注册</a></button>
                       </form>
                   </div>
                    <!-- 登录 end-->
@@ -89,4 +90,32 @@
        </div>
     </div>
   </body>
+   <script>
+       $(function () {
+           $("#login").click(function () {
+               if ($("#user").val().length == 0){
+                   return alert("请输入内容!");
+               }
+               if ($("#password").val().length == 0){
+                   return alert("请输入密码!");
+               }
+
+               $.ajax({
+                   url:"http://localhost:3000/login",
+                   type:"POST",
+                   data:{
+                       username:$("#user").val(),
+                       password:$("#password").val()
+                   },
+                   success:function (res) {
+                       alert("登录成功!")
+                   },
+                   error:function (err) {
+                       console.log(err);
+                   }
+               })
+
+           })
+       });
+   </script>
 </html>

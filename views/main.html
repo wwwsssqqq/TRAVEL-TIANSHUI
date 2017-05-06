@@ -8,6 +8,10 @@
         <script type="text/javascript" src="../public/js/jquery-1.12.2.min.js"></script>
        <script type="text/javascript" src="../public/js/j-marquee.js"></script>
        <script type="text/javascript" src="../public/js/pptBox.js"></script>
+       <script type="text/javascript" src="../public/js/el.js"></script>
+       <script type="text/javascript" src="../public/js/selected.js"></script>
+       <script type="text/javascript" src="../public/js/banner.js"></script>
+
    </head>
   <body>
       <div class="ui-wrap">
@@ -131,7 +135,7 @@
                                             <img class="img-con" src="../public/image/tianshui.jpg" alt="" />
                                         </a>
                                         <ul class="news-list">
-                                             <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
+                                            <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
                                             <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
                                             <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
                                             <li class="list-con"><a class="person" href="#">天水某游客…………………………</a><span class="news-data">2017-01-01</span></li>
@@ -182,13 +186,44 @@
                             <span class="type-name travel-box">旅游景点</span>
                             <a class="more" href="#">更多>></a>
                     </span>
-                    <ul class="travle-imgs J-marquee" id="Marquee_x">
-                         <li class="new-left"><a href="#" > <img class="one" src="../public/image/shuilian.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="../public/image/daxiang.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="../public/image/zhiwu.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>
-                         <li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>
-                    </ul>
+                  <div class="jg_b_colunm" id="Marquee_x">
+                      <ul>
+                          <li>
+                              <div>
+                                  <a href="">
+                                      <img src="../public/image/daxiang.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=84">
+                                      <img src="../public/image/shuilian.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=85">
+                                      <img src="../public/image/daxiang.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=86">
+                                      <img src="../public/image/zhiwu.jpg" alt="" />
+                                  </a>
+                              </div>
+                              <div>
+                                  <a href="/Home/detail?newId=87">
+                                      <img src="../public/image/nanguo.jpg" alt="" />
+                                  </a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                    <!--<ul class="travle-imgs J-marquee" id="Marquee_x">-->
+                         <!--<li class="new-left"><a href="#" > <img class="one" src="../public/image/shuilian.jpg" alt=""  /></a></li>-->
+                         <!--<li ><a  href="#" > <img class="one" src="../public/image/daxiang.jpg" alt=""  /></a></li>-->
+                         <!--<li ><a  href="#" > <img class="one" src="../public/image/zhiwu.jpg" alt=""  /></a></li>-->
+                         <!--<li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>-->
+                         <!--<li ><a  href="#" > <img class="one" src="../public/image/nanguo.jpg" alt=""  /></a></li>-->
+                    <!--</ul>-->
               </div>
                <!-- 旅游景点 end -->
           </div>
@@ -199,12 +234,13 @@
         </div>
       </div>
   </body>
+   <script>
+       $(function () {
+           $('#Marquee_x').jcMarquee({ 'marquee': 'x', 'margin_right': '10px', 'speed': 20 });
+           // DIVCSS5提示：10px代表间距，第二个20代表滚动速度
+
+       });
+   </script>
 </html>
 
-<script type="text/javascript">
-    $(function () {
-        $('#Marquee_x').jcMarquee({ 'marquee': 'x', 'margin_right': '10px', 'speed': 20 });
-        // DIVCSS5提示：10px代表间距，第二个20代表滚动速度
 
-    });
-</script>

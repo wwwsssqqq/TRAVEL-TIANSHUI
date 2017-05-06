@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../public/css/container.css" />
     <link rel="stylesheet" type="text/css" href="../public/css/login.css" />
     <script type="text/javascript" src="../public/js/jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="../public/js/pptBox.js"></script>
+       <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+       <script type="text/javascript" src="../public/js/pptBox.js"></script>
   </head>
   <body>
       <div class="ui-wrap">
@@ -64,23 +65,23 @@
                           </div>
                           <!-- 登录 start-->
                    <div class="ui-login-form regist-form">
-                <form class="login-form" method="" active="">
-                    <span class="login-box login-pos">
-                       <label class="login-name">用户名：</label>
-                       <input  class="login-con" type="text" placeholder="请输入用户名" />
-                    </span>
-                     <span class="login-box">
-                       <label class="login-name">密码：</label>
-                       <input  class="login-con" type="password" placeholder="请输入密码" />
-                    </span>
-                     <span class="login-box">
-                       <label class="login-name insure-pass">确认密码：</label>
-                       <input  class="login-con insure-pass-con" type="password" placeholder="请再次输入密码" />
-                    </span>
-                    <button class="ui-submit submit-pos" type="submit">注册</button>
-                     <button class="ui-submit reset-pos" type="reset">重置</button>
-                </form>
-           </div>
+                            <form class="login-form" method="" active="">
+                                <span class="login-box login-pos">
+                                   <label for="user" class="login-name">用户名：</label>
+                                   <input id="user" class="login-con" type="text" placeholder="请输入用户名" />
+                                </span>
+                                 <span class="login-box">
+                                   <label for="password" class="login-name">密码：</label>
+                                   <input id="password" class="login-con" type="password" placeholder="请输入密码" />
+                                </span>
+                                 <!--<span class="login-box">-->
+                                   <!--<label class="login-name insure-pass">确认密码：</label>-->
+                                   <!--<input  class="login-con insure-pass-con" type="password" placeholder="请再次输入密码" />-->
+                                <!--</span>-->
+                                 <button id="register" class="ui-submit submit-pos" type="submit">注册</button>
+                                 <button class="ui-submit reset-pos" type="reset">重置</button>
+                            </form>
+                   </div>
 
                    <!-- 登录 end-->
               </div>
@@ -95,6 +96,27 @@
        </div>
     </div>
   </body>
+   <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+   <script>
+       $(function () {
+           $("#register").click(function () {
+               $.ajax({
+                   url:"http://localhost:3000/register",
+                   type:"POST",
+                   data:{
+                       username:$("#user").val(),
+                       password:$("#password").val()
+                   },
+                   success:function (res) {
+                       alert(res);
+                   },
+                   error:function (err) {
+                       console.log(err);
+                   }
+               })
+           })
+       });
+   </script>
 </html>
 
 
