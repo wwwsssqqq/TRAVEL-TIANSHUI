@@ -58,20 +58,20 @@
                 </small>
             </a>
         </nav>
-        <form >
+        <form method="get" >
         <div class="row">
-            <div class=" col-md-offset-1 col-md-10">
+            <div class=" col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10 ">
                 <div class="m-t20">
                     <div class="input-group m-t20">
-                        <span class="input-group-addon" id="basic-addon1">用户名：</span>
-                        <input type="text" class="form-control" placeholder="用户名..." aria-describedby="basic-addon1">
+                        <span class="input-group-addon" >用户名：</span>
+                        <input type="text" name="userName" class="form-control" placeholder="用户名..." >
                     </div>
 
                     <div class="input-group m-t20">
-                        <span class="input-group-addon" id="basic-addon1">密&nbsp;&nbsp; 码：</span>
-                        <input type="password" class="form-control" placeholder="密码..." aria-describedby="basic-addon1">
+                        <span class="input-group-addon" >密&nbsp;&nbsp; 码：</span>
+                        <input type="password"  name="password" class="form-control" placeholder="密码...">
                     </div>
-                    <button type="button" class="btn btn-primary  btn-block m-t20" onclick = 'location.href="/admin/attractlist"'>登录</button>
+                    <button type="submit" class="btn btn-primary  btn-block m-t20" id="loginSubmit" >登录</button>
                 </div>
 
             </div>
@@ -80,11 +80,39 @@
         </form>
     </div>
 
-
-
-
 </body>
 <script src="/public/js/jquery-1.12.2.min.js"></script>
 <script src="/public/js/bootstrap.js"></script>
 <script src="/public/js/commmon.js"></script>
+<script>
+$("#loginSubmit").on("click", function(e){
+   e.preventDefault();
+   var userName = $("input[name='userName']").val();
+   var password = $("input[name='password']").val();
+   if(userName && password){
+       $.ajax({
+           url : "/admin/login",
+           type:　"get",
+           dataType:"json",
+           data:{
+               userName: userName,
+               password: password
+           },
+           success: function(res){
+               if(res.retcode != 0){
+                   alert(res.retmsg);
+               }else{
+                   location.href ="/admin/attractlist";
+               }
+           },
+           error:　function(res){
+               alert(`登录失败${res}`);
+           }
+       })
+   }else{
+       alert("请输入用户名和密码！");
+   }
+});
+</script>
+
 </html>

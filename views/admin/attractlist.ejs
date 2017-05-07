@@ -17,69 +17,41 @@
                 </tr>
                 </thead>
                 <tbody>
+                <%
+                    for(var i=0; i<attractlist.length; i++){
+                %>
                 <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
+                    <td><%=attractlist[i].id%></td>
+                    <td><%=attractlist[i].attractname%></td>
+                    <td><%=attractlist[i].level%></td>
+                    <td><%=attractlist[i].score%></td>
                     <td><a href="">删除</a>|<a href="">详情</a></td>
                 </tr>
-                <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
-                    <td><a href="">删除</a>|<a href="">详情</a></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
-                    <td><a href="">删除</a>|<a href="">详情</a></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
-                    <td><a href="">删除</a>|<a href="">详情</a></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
-                    <td><a href="">删除</a>|<a href="">详情</a></td>
-                </tr>
-                <tr>
-                    <td>001</td>
-                    <td>麦积山</td>
-                    <td>5星</td>
-                    <td>优秀</td>
-                    <td><a href="">删除</a>|<a href="">详情</a></td>
-                </tr>
+                <%
+                    }
+                %>
+
                 </tbody>
             </table>
         </div>
         <nav aria-label="Page navigation">
-            <ul class="pagination pull-right">
-                <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
+            <div class="pagination pull-right" id="pagination" pageCount="<%=pageCount%>" currentPage="<%=currentPage%>">
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Previous">-->
+                        <!--<span aria-hidden="true">&laquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href="#">1</a></li>-->
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Next">-->
+                        <!--<span aria-hidden="true">&raquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </div>
         </nav>
 
     </div>
@@ -88,4 +60,12 @@
 </body>
 
 <%- include('./footer.ejs')%>
+    <script>
+        var pageContainer = $("#pagination");
+       pageContainer.bootstrapPaginator({
+            totalPages: pageContainer.attr("pageCount"),
+            currentPage: pageContainer.attr("currentPage")
+        })
+
+    </script>
 </html>

@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cors = require('cors');
@@ -27,15 +27,15 @@ app.use(bodyParser.json({ limit: '20mb' }));
 
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: true }));
 
-// app.use(cookieParser());
+app.use(cookieParser());
 
 app.use(cors());
 
 app.use(session({
-    secret: 'keyboard cat',
+    secret: 'tianshui',
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 8640000000 }
+    cookie: { maxAge: 3600000,httpOnly:true }
 }));
 
 
