@@ -59,6 +59,4 @@ admin.get('/test', function(req,res){
    res.json({});
 });
 
-
-
 module.exports = admin;
