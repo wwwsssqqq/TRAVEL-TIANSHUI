@@ -2,6 +2,8 @@ var express = require("express");
 var testmodel = require("../src/model/testmodel");
 var router = express.Router();
 
+
+
 router.get("/getalluser",function(req,res){
     testmodel.queryAllUser(function(err,result){
         if(err){

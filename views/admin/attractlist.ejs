@@ -1,0 +1,71 @@
+    <%- include('./head.ejs')%>
+    <div class="col-md-10">
+        <ol class="breadcrumb">
+            <li><a href="#">后台管理</a></li>
+            <li><a href="#">旅游景点</a></li>
+            <li class="pull-right"><a href="#">新增景点</a></li>
+        </ol>
+        <div class="panel panel-default">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                <tr>
+                    <td>景点编号</td>
+                    <td>景点名称</td>
+                    <td>景点星级</td>
+                    <td>景点评分</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    for(var i=0; i<attractlist.length; i++){
+                %>
+                <tr>
+                    <td><%=attractlist[i].id%></td>
+                    <td><%=attractlist[i].attractname%></td>
+                    <td><%=attractlist[i].level%></td>
+                    <td><%=attractlist[i].score%></td>
+                    <td><a href="">删除</a>|<a href="">详情</a></td>
+                </tr>
+                <%
+                    }
+                %>
+
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation">
+            <div class="pagination pull-right" id="pagination" pageCount="<%=pageCount%>" currentPage="<%=currentPage%>">
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Previous">-->
+                        <!--<span aria-hidden="true">&laquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href="#">1</a></li>-->
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Next">-->
+                        <!--<span aria-hidden="true">&raquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+</body>
+
+<%- include('./footer.ejs')%>
+    <script>
+        var pageContainer = $("#pagination");
+       pageContainer.bootstrapPaginator({
+            totalPages: pageContainer.attr("pageCount"),
+            currentPage: pageContainer.attr("currentPage")
+        })
+
+    </script>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景点管理</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <style>
+        thead{
+            font-weight:bold;
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<header >
+    <nav class="navbar navbar-default">
+        <a class="navbar-brand">
+            <small>
+                <i class="glyphicon glyphicon-leaf"></i>
+                天水旅游网站后台界面
+            </small>
+        </a>
+        <ul class="nav navbar-nav pull-right">
+            <li><a style="cursor: default;" ><%=userName%></a></li>
+            <li><a href="/admin/login.html">  <i class="glyphicon glyphicon-log-out" style="padding-top:4px;"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container-fluid">
+    <div class="list-group col-md-2">
+        <a class="list-group-item " href="/admin/attractlist">旅游景点</a>
+        <a class="list-group-item" href="/admin/foodlist">特色小吃</a>
+        <a class="list-group-item" href="#">新闻菜单</a>
+        <a class="list-group-item" href="#">旅游评论</a>
+        <a class="list-group-item" href="#">。。。。</a>
+    </div>

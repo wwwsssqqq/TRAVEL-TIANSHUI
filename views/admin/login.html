@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>景点管理</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <style>
+        thead{
+            font-weight:bold;
+            background-color: #dddddd;
+        }
+        body{
+            background-color: #ccc;
+        }
+        .m-t20{
+            margin-top:20px;
+        }
+        .m-t10{
+            margin-top:10px;
+        }
+        .login-container{
+            width:400px;
+            height:300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: auto auto;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!--<header >-->
+    <!--<nav class="navbar navbar-default">-->
+        <!--<a class="navbar-brand">-->
+            <!--<small>-->
+                <!--<i class="glyphicon glyphicon-leaf"></i>-->
+                <!--天水旅游网站后台界面-->
+            <!--</small>-->
+        <!--</a>-->
+    <!--</nav>-->
+<!--</header>-->
+
+
+    <div class="login-container">
+        <nav class="navbar navbar-default">
+            <a class="navbar-brand">
+                <small>
+                    <i class="glyphicon glyphicon-leaf"></i>
+                    天水旅游网站后台
+                </small>
+            </a>
+        </nav>
+        <form method="get" >
+        <div class="row">
+            <div class=" col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10 ">
+                <div class="m-t20">
+                    <div class="input-group m-t20">
+                        <span class="input-group-addon" >用户名：</span>
+                        <input type="text" name="userName" class="form-control" placeholder="用户名..." >
+                    </div>
+
+                    <div class="input-group m-t20">
+                        <span class="input-group-addon" >密&nbsp;&nbsp; 码：</span>
+                        <input type="password"  name="password" class="form-control" placeholder="密码...">
+                    </div>
+                    <button type="submit" class="btn btn-primary  btn-block m-t20" id="loginSubmit" >登录</button>
+                </div>
+
+            </div>
+        </div>
+
+        </form>
+    </div>
+
+</body>
+<script src="/public/js/jquery-1.12.2.min.js"></script>
+<script src="/public/js/bootstrap.js"></script>
+<script src="/public/js/commmon.js"></script>
+<script>
+$("#loginSubmit").on("click", function(e){
+   e.preventDefault();
+   var userName = $("input[name='userName']").val();
+   var password = $("input[name='password']").val();
+   if(userName && password){
+       $.ajax({
+           url : "/admin/login",
+           type:　"get",
+           dataType:"json",
+           data:{
+               userName: userName,
+               password: password
+           },
+           success: function(res){
+               if(res.retcode != 0){
+                   alert(res.retmsg);
+               }else{
+                   location.href ="/admin/attractlist";
+               }
+           },
+           error:　function(res){
+               alert(`登录失败${res}`);
+           }
+       })
+   }else{
+       alert("请输入用户名和密码！");
+   }
+});
+</script>
+
+</html>
